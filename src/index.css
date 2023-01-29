@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Koh+Santepheap:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .title-img::before {
+    position: absolute;
+    left: 20px;
+    top: 75%;
+    transform: translateY(-50%);
+    content: '';
+    width: 100px;
+    height: 1px;
+    background: #86a0b6;
+  }
+
+  .title-img::after {
+    position: absolute;
+    right: 20px;
+    top: 75%;
+    transform: translateY(-50%);
+    content: '';
+    width: 100px;
+    height: 1px;
+    background: #86a0b6;
+  }
+}

@@ -7,12 +7,49 @@ import { useTranslation } from 'react-i18next';
 import { Heading } from './shared/Heading';
 
 const images = [
-  { src: '/images/k-1.jpg', width: 480, height: 480, className: '' },
-  { src: '/images/k-5.jpg', width: 480, height: 960, className: 'row-span-2' },
-  { src: '/images/k-3.jpg', width: 480, height: 480, className: '' },
-  { src: '/images/k-6.jpg', width: 480, height: 480, className: '' },
-  { src: '/images/k-4.jpg', width: 480, height: 480, className: '' },
-  { src: '/images/k-2.jpg', width: 960, height: 450, className: 'col-span-2' },
+  {
+    src: '/images/gallery/k-1-sm.jpg',
+    large: '/images/gallery/k-1.jpg',
+    width: 1500,
+    height: 1500,
+    className: '',
+  },
+  {
+    src: '/images/gallery/k-5-sm.jpg',
+    large: '/images/gallery/k-5.jpg',
+    width: 1320,
+    height: 2104,
+    className: 'row-span-2',
+  },
+  {
+    src: '/images/gallery/k-6.jpg',
+    large: '/images/gallery/k-6.jpg',
+    width: 1920,
+    height: 1920,
+    className: '',
+  },
+  {
+    src: '/images/gallery/k-4-sm.jpg',
+    large: '/images/gallery/k-4.jpg',
+    width: 1920,
+    height: 1920,
+    className: '',
+  },
+
+  {
+    src: '/images/gallery/k-3.jpg',
+    large: '/images/gallery/k-3-sm.jpg',
+    width: 1920,
+    height: 1920,
+    className: '',
+  },
+  {
+    src: '/images/gallery/k-2-sm.jpg',
+    large: '/images/gallery/k-2.jpg',
+    width: 1920,
+    height: 1190,
+    className: 'col-span-2',
+  },
 ];
 
 interface Props {
@@ -43,7 +80,7 @@ const SimpleGallery: React.FC<Props> = ({ galleryId }) => {
         <div key={x.src} className={x.className}>
           <div className="relative h-full w-full overflow-hidden rounded-lg bg-white shadow-xl">
             <a
-              href={x.src}
+              href={x.large}
               data-pswp-width={x.width}
               data-pswp-height={x.height}
               key={galleryId + '-' + idx}
